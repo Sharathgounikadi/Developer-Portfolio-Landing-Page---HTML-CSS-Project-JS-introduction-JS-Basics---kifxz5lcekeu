@@ -1,162 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;500;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: 'Lato', sans-serif;
 }
-h1{
-    margin: 0 !important;
-}
 
-
-
-
-/*---------------Hero Section------------------- */
-.hero-section {
+.hero {
     position: relative;
     height: 100vh;
+    background-image: url("https://tse1.explicit.bing.net/th?id=OIP.fXJQuuiwWmW8q2wlqbS-7wHaEK&pid=Api&P=0&h=180");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
 }
-.hero-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.hero-text {
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Lato', sans-serif;
+
+.hero-content {
+    text-align: center;
+    color: rgb(229, 250, 2);
     font-weight: 400;
-    text-align: center;
-}
-.hero-section h1, .hi-text{
-    font-size: 60px !important;
 }
 
-.hero-section span{
-    font-size: 25px;
-}
-.hero-section h1 ,h2{
-    color: #fff !important;
-}
-.text-small{
-    font-size: 15px;
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-/*--------- Black Box Section -----------*/
-.black-box-section {
-    background-color: #000;
-    text-align: center;
-    color: #fff;
-
-    /* white-space: nowrap; */
+h1 {
+    font-size: 3em;
+    margin-top: 0;
 }
-.black-box-section h3 {
+
+.black-box{
+    background-color: black;
+    border-bottom: 3px solid white;
+}
+
+.black-box h3{
+    margin-top: 0%;
     font-size: 80px;
     font-weight: 400;
-    text-transform: capitalize;
-}
-.black-box-section span {
-    font-size: 96px;
     color: white;
-    /* white-space: nowrap; */
-
+    text-align: center;
 }
 
-/*--------- Card Container Section using Grid -----------*/
-.card-container-section {
+.black-box span{
+    font-size:96px;
+    color: white;
+    text-align: center;
+}
+
+.card-container{
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 20px;
     justify-items: center;
-    padding: 70px;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.grid-item {
+.card{
+    max-width:340px;
+    height:400px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px 15px grey;
+}
+
+.card img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 50%;
+}
+
+.card-content{
+    text-align: start;
+    margin: 10px;
+    padding: 10px;
+}
+
+.grid-item{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 340px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.grid-item .img-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.bottom-section {
+.bottom-content{
     display: flex;
     justify-content: space-around;
-    padding: 30px 0;
-}
-.contact-me h3, .about-me h3{
-    font-weight: 400;
-    font-size: 40px !important;
-    margin: 0;
-}
-.bottom-section .contact-me, .bottom-section .about-me {
-    flex-basis: 33%;
-    color: #fff;
-    padding: 20px;
-    /* border-radius: 10px; */
-}
-.bottom-section .contact-me {
-    background-color:rgb(118,28,0)
-}
-.bottom-section .about-me {
-    background-color: rgb(77,95,0) 
+    margin: 50px;
+    text-align: start;
 }
 
+.contact-me{
+    /* width: 200px; */
+    width: 35%;
+    /* height: 200px; */
+    background-color: green;
+    margin: 10px;
+    padding: 10px;
+}
 
+.about-me{
+    /* width: 200px; */
+    /* height: 200px; */
+    width: 35%;
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+}
 
-
-
-/*--------- Responsive Design -----------*/
 @media screen and (max-width: 786px) {
-    .hero-section {
+    .hero{
         min-height: 50vh;
     }
-    .hero-section h1, .hi-text{
-        font-size: 30px !important;
+
+    .black-box{
+        font-size: 24px;
     }
-    .hero-text{
-        width: 100%;
-    }
-    /* .hero-section h1
-    {
-        font-weight: 500;
-    } */
-    
-    .hero-section span{
-        font-size: 16px;
-    }
-    .black-box-section h3 {
-        font-size: 27px;
-    }
-    .black-box-section span {
-        font-size: 45px;
-       
-    
-    }
-    .bottom-section {
+
+    .bottom-content{
         flex-direction: column;
     }
-    .bottom-section .contact-me, .bottom-section .about-me {
-        padding-bottom: 5rem !important;
-    }
-}
+  }
